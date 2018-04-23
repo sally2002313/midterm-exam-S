@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Prince Benson Waimai</title>
+</head>
+<body>
+
+    <!-- Site Header -->
+<h1>Prince Benson Fusion Restaurant</h1>
+
+
+<!-- Blog Post -->
+<h2>Here are all our food</h2>
+<p>Tasty Treats To Your Door</p>
+
+<!-- Item1 -->
+<p>Food:$10</p>
+<img src="https://tse1-mm.cn.bing.net/th?id=OIP.mcYVEjDMN3vHHatun2NUEgHaFj&p=0&o=5&pid=1.1">
+<!-- Item2 -->
+<p>Food:$20</p>
+<img src="https://tse2-mm.cn.bing.net/th?id=OIP.1k4IgGsxXULFbHEumgoVxAHaHa&p=0&o=5&pid=1.1">
+<!-- Item3 -->
+<p>Food:$30</p>
+<img src="https://tse2-mm.cn.bing.net/th?id=OIP.pJXVECeHB33knwrJdY9TTwHaFj&p=0&o=5&pid=1.1">
+
+<!-- Order From -->
+<h2>Place your order</h2>
+<from action="{%url 'waimai:home_page'%}"method="POST">
+    {%csrf_token%}
+    <input type="text" name ="item" placeholder="Plase Type Which Item You Want"></textarea><br>
+    <textarea name ="address"placeholder="Plase Type Your Address"></textarea><br>
+    <input type="submit" value="Place Your Order">
+
+</form>
+<!-- Show order -->
+<h1>Your order:</h1>
+<p>Item ordered:{{item}}</p>
+<P>Delivery Address:{{adddress}}</P>
+
+
+
+</body>
+</html>
